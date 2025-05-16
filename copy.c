@@ -1,0 +1,17 @@
+// write a program to copy the content of one file to another.
+
+#include <stdio.h>
+
+int main(){
+    FILE *f1, *f2;
+    char ch;
+    f1 = fopen("copy.c","r");
+    f2 = fopen("test.txt","w");
+    while(feof(f1)==0){
+        ch = fgetc(f1);
+        fputc(ch,f2);
+    }
+    fclose(f1);
+    fclose(f2);
+    return 0;
+}

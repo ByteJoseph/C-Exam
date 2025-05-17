@@ -7,14 +7,16 @@ void main(){
     int a,n=0,i;
     printf("Enter the number of terms: ");
     scanf("%d",&a);
-    for (i=0;i<=a;i++){
+    for (i=0;i<a;i++){
      printf("%d\t",fib(n));
      n++;
     }
 }
 int fib(int x){
-    if (x==0 || x==1){
+    if (x==1){
         return 1;
+    }else if (x==0){
+        return 0;
     }
     else{
         return fib(x-1)+fib(x-2);
